@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="theme-color" content="#f4ead7">
+
+  <title>Your MEEJAZ Receipt</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <link rel="stylesheet" href="style.css">
+
+
+  <script src="receipt.js" defer></script>
+
+</head>
+
+
+<body class="receipt-page">
+
+
+  <!-- RECEIPT NAVIGATION -->
+
+  <header class="receipt-nav">
+
+    <a class="brand" href="index.html">
+
+      MEEJAZ<span>®</span>
+
+      <small>THE ATTAR HOUSE</small>
+
+    </a>
+
+
+    <a class="text-link" href="index.html">
+
+      ← Back to MEEJAZ
+
+    </a>
+
+  </header>
+
+
+
+  <!-- RECEIPT CONTENT -->
+
+  <main class="receipt-wrap">
+
+
+    <div class="receipt-topline">
+
+      <span>THE MEEJAZ ATTAR HOUSE</span>
+
+      <span id="receiptDateTop"></span>
+
+    </div>
+
+
+
+    <section class="receipt-card" id="receiptCard">
+
+
+      <div class="receipt-success-mark">
+
+        ✳
+
+      </div>
+
+
+      <p class="eyebrow">
+
+        YOUR ORDER SUMMARY
+
+      </p>
+
+
+      <h1>
+
+        Your MEEJAZ<br>
+
+        <em>receipt.</em>
+
+      </h1>
+
+
+      <p class="receipt-lead">
+
+        Your selection is ready.
+
+        Review the details below, then send your order
+        to us on WhatsApp to confirm.
+
+      </p>
+
+
+
+      <!-- DYNAMIC RECEIPT CONTENT -->
+
+      <div id="receiptContent"></div>
+
+
+
+      <!-- RECEIPT ACTIONS -->
+
+      <div class="receipt-actions" id="receiptActions">
+
+
+        <a
+
+          class="button button-dark"
+
+          id="whatsappOrder"
+
+          href="#"
+
+          target="_blank"
+
+          rel="noopener"
+
+        >
+
+          Confirm order on WhatsApp
+
+          <span>↗</span>
+
+        </a>
+
+
+        <button
+
+          class="button button-outline"
+
+          id="printReceipt"
+
+          type="button"
+
+        >
+
+          Print receipt
+
+          <span>⌁</span>
+
+        </button>
+
+
+      </div>
+
+
+
+      <p class="receipt-disclaimer">
+
+        This is an order summary, not a payment confirmation.
+        Your order is confirmed after MEEJAZ replies on WhatsApp.
+
+        Payment method: cash on delivery
+        (confirm availability with the seller).
+
+      </p>
+
+
+    </section>
+
+
+
+    <div class="receipt-bottom">
+
+      <span>MEEJAZ · THE ART OF ATTAR</span>
+
+      <span>LEAVE A LITTLE LOVELY BEHIND.</span>
+
+    </div>
+
+
+  </main>
+
+
+
+  <!-- PRINT RECEIPT -->
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+      var printButton =
+        document.getElementById('printReceipt');
+
+
+      if (printButton) {
+
+        printButton.addEventListener('click', function () {
+
+          window.print();
+
+        });
+
+      }
+
+    });
+
+  </script>
+
+
+</body>
+
+</html>
